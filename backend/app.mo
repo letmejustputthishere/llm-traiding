@@ -28,9 +28,7 @@ actor {
     func() : async () {
 
       // prepare the message for the LLM
-      let content = generatePrompt(priceCache, swap);
-
-      logs.add("Prompt: \n" # content);
+      let content = generatePrompt(priceCache, swap, logs);
 
       let response = await LLM.chat(#Llama3_1_8B).withMessages([
         #system_ {
