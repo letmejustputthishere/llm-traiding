@@ -10,8 +10,8 @@ import Swap "swap";
 actor {
   let swap = Swap.Swap(10000000000, 0);
 
-  var priceCache : Buffer.Buffer<Float> = Buffer.Buffer<Float>(0);
-  var logs : Buffer.Buffer<Text> = Buffer.Buffer<Text>(0);
+  let priceCache : Buffer.Buffer<Float> = Buffer.Buffer<Float>(0);
+  let logs : Buffer.Buffer<Text> = Buffer.Buffer<Text>(0);
 
   ignore Timer.recurringTimer<system>(
     #seconds 6,
