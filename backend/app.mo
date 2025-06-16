@@ -44,7 +44,7 @@ actor {
     },
   );
 
-  public func getLogs() : async [Text] {
+  public query func getLogs() : async [Text] {
     Buffer.toArray(logs);
   }
 
